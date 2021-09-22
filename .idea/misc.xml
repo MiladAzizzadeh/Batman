@@ -3,16 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/dev/workspace/android/Batman/app/src/main/res/drawable-v24/background_title.xml" value="0.25384615384615383" />
         <entry key="..\:/dev/workspace/android/Batman/app/src/main/res/drawable/background_avatar.xml" value="0.2578125" />
+        <entry key="..\:/dev/workspace/android/Batman/app/src/main/res/drawable/background_back_icon.xml" value="0.25384615384615383" />
         <entry key="..\:/dev/workspace/android/Batman/app/src/main/res/drawable/background_category.xml" value="0.2578125" />
         <entry key="..\:/dev/workspace/android/Batman/app/src/main/res/drawable/background_gradient.xml" value="0.1" />
+        <entry key="..\:/dev/workspace/android/Batman/app/src/main/res/drawable/background_imdb.xml" value="0.25384615384615383" />
         <entry key="..\:/dev/workspace/android/Batman/app/src/main/res/drawable/background_search.xml" value="0.2578125" />
         <entry key="..\:/dev/workspace/android/Batman/app/src/main/res/drawable/ic_gun.xml" value="0.2578125" />
         <entry key="..\:/dev/workspace/android/Batman/app/src/main/res/drawable/ic_hats.xml" value="0.2578125" />
         <entry key="..\:/dev/workspace/android/Batman/app/src/main/res/drawable/ic_localmovies.xml" value="0.2578125" />
         <entry key="..\:/dev/workspace/android/Batman/app/src/main/res/drawable/ic_search.xml" value="0.2578125" />
+        <entry key="..\:/dev/workspace/android/Batman/app/src/main/res/drawable/ic_star.xml" value="0.25384615384615383" />
         <entry key="..\:/dev/workspace/android/Batman/app/src/main/res/drawable/ic_television.xml" value="0.2578125" />
-        <entry key="..\:/dev/workspace/android/Batman/app/src/main/res/layout/activity_detail.xml" value="0.24166666666666667" />
+        <entry key="..\:/dev/workspace/android/Batman/app/src/main/res/layout/activity_detail.xml" value="0.2" />
         <entry key="..\:/dev/workspace/android/Batman/app/src/main/res/layout/activity_main.xml" value="0.24166666666666667" />
         <entry key="..\:/dev/workspace/android/Batman/app/src/main/res/layout/item_category.xml" value="0.8800000000000001" />
         <entry key="..\:/dev/workspace/android/Batman/app/src/main/res/layout/item_movie.xml" value="0.24166666666666667" />

@@ -8,12 +8,12 @@ import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import ir.maziz.batman.common.BatmanSingleObserver
 import ir.maziz.batman.common.BatmanViewModel
+import ir.maziz.batman.common.apiKey
 import ir.maziz.batman.common.asyncNetworkRequest
 import ir.maziz.batman.data.BatmanResponse
 import ir.maziz.batman.data.Search
 import ir.maziz.batman.data.repo.BatmanMoviesRepository
 
-const val apiKey = "3e974fca"
 const val search = "batman"
 
 class MainViewModel(batmanMoviesRepository: BatmanMoviesRepository) : BatmanViewModel() {

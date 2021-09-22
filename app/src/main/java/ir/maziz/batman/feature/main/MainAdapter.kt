@@ -14,7 +14,8 @@ import org.koin.java.KoinJavaComponent.inject
 
 class MainAdapter(
     val imageLoadingService: ImageLoadingService,
-    val movies: List<Search>
+    val movies: List<Search>,
+    val itemEventListener: ItemEventListener
 ) :
     RecyclerView.Adapter<MainAdapter.ViewHolder>() {
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -24,7 +25,7 @@ class MainAdapter(
             imageLoadingService.load(movieIv, movie.Poster)
             titleTv.text = movie.Title
             itemView.setOnClickListener {
-
+                itemEventListener.onClick(movie.imdbID)
             }
             itemView.implementSpringAnimationTrait()
         }
@@ -36,4 +37,8 @@ class MainAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(movies[position])
 
     override fun getItemCount(): Int = movies.size
+
+    interface ItemEventListener {
+        fun onClick(imdbId: String)
+    }
 }

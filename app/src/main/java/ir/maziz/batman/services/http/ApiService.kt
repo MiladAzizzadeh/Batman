@@ -2,6 +2,7 @@ package ir.maziz.batman.services.http
 
 import io.reactivex.Single
 import ir.maziz.batman.data.BatmanResponse
+import ir.maziz.batman.data.DetailBatmanResponse
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
@@ -14,6 +15,12 @@ interface ApiService {
         @Query("apikey") apiKey: String,
         @Query("s") search: String
     ): Single<BatmanResponse>
+
+    @GET(".")
+    fun getDetail(
+        @Query("apikey") apiKey: String,
+        @Query("i") imdbId: String
+    ): Single<DetailBatmanResponse>
 }
 
 fun createApiServiceInstance(): ApiService {

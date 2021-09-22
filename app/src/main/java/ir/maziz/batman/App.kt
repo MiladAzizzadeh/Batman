@@ -5,6 +5,7 @@ import com.facebook.drawee.backends.pipeline.Fresco
 import ir.maziz.batman.data.repo.BatmanMoviesRepository
 import ir.maziz.batman.data.repo.BatmanMoviesRepositoryImpl
 import ir.maziz.batman.data.repo.source.BatmanMoviesRemoteDataSource
+import ir.maziz.batman.feature.detail.DetailViewModel
 import ir.maziz.batman.feature.main.MainViewModel
 import ir.maziz.batman.services.http.createApiServiceInstance
 import ir.maziz.batman.services.image.FrescoImageLoading
@@ -29,6 +30,7 @@ class App : Application() {
                 )
             }
             viewModel { MainViewModel(get()) }
+            viewModel { (imdbId: String) -> DetailViewModel(get(),imdbId) }
         }
         startKoin {
             androidContext(this@App)
