@@ -6,3 +6,11 @@
 </section>
 <p>Batman movies project</p>
 </div>
+
+## Features
+
+This application allows users to:
+
+- View an initial list of Batman-related movies on the main screen.
+- See detailed information about a movie by clicking on it from the list.
+- Search for movies by title using the search bar located on the main page. The movie list will update to display the search results.
