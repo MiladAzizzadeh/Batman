@@ -3,6 +3,7 @@ package ir.maziz.batman.feature.main
 import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.os.Bundle
+import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ir.maziz.batman.R
@@ -13,7 +14,7 @@ import ir.maziz.batman.services.image.ImageLoadingService
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class MainActivity : BatmanActivity(), MainAdapter.ItemEventListener {
+class MainActivity : BatmanActivity(), MainAdapter.ItemEventListener, SearchView.OnQueryTextListener {
     val mainViewModel: MainViewModel by viewModel()
     val imageLoadingService: ImageLoadingService by inject()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,11 +45,26 @@ class MainActivity : BatmanActivity(), MainAdapter.ItemEventListener {
         val categoryRv = findViewById<RecyclerView>(R.id.movieCategoryRv);
         categoryRv.layoutManager = LinearLayoutManager(this, RecyclerView.HORIZONTAL, false)
         categoryRv.adapter = CategoryAdapter(categoryDrawables, categoryTitles)
+
+        val searchView = findViewById<SearchView>(R.id.searchView)
+        searchView.setOnQueryTextListener(this)
     }
 
     override fun onClick(imdbId: String) {
         startActivity(Intent(this, DetailActivity::class.java).apply {
             putExtra(id, imdbId)
         })
+    }
+
+    override fun onQueryTextSubmit(query: String?): Boolean {
+        if (query != null) {
+            mainViewModel.searchMovies(query)
+        }
+        return true
+    }
+
+    override fun onQueryTextChange(newText: String?): Boolean {
+        // You can implement search as you type here if needed
+        return false
     }
 }
